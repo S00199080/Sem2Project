@@ -1,0 +1,44 @@
+﻿<Window x:Class="Sem2Project.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sem2Project"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListBox HorizontalAlignment="Left" Height="127" Margin="23,69,0,0" VerticalAlignment="Top" Width="135" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Left" Margin="61,31,0,0" TextWrapping="Wrap" Text="Weapon" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="278,31,0,0" TextWrapping="Wrap" Text="Rings" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="206,69,0,0" TextWrapping="Wrap" Text="Ring 1:" VerticalAlignment="Top" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Left" Margin="206,165,0,0" TextWrapping="Wrap" Text="Ring 3:" VerticalAlignment="Top" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Left" Margin="344,69,0,0" TextWrapping="Wrap" Text="Ring 2:" VerticalAlignment="Top" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Left" Margin="344,165,0,0" TextWrapping="Wrap" Text="Ring 4:" VerticalAlignment="Top" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Left" Margin="570,31,0,0" TextWrapping="Wrap" Text="Armour" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="503,69,0,0" TextWrapping="Wrap" Text="Helm:" VerticalAlignment="Top" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Left" Margin="503,165,0,0" TextWrapping="Wrap" Text="Leggings:" VerticalAlignment="Top" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Left" Margin="640,69,0,0" TextWrapping="Wrap" Text="Chestpiece:" VerticalAlignment="Top" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Left" Margin="640,165,0,0" TextWrapping="Wrap" Text="Boots:" VerticalAlignment="Top" FontSize="14"/>
+        <TextBlock HorizontalAlignment="Left" Margin="50,225,0,0" TextWrapping="Wrap" Text="Attributes" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Margin="23,249,0,0" TextWrapping="Wrap" Text="Vigor:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="23,265,0,0" TextWrapping="Wrap" Text="Attunement:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="23,281,0,0" TextWrapping="Wrap" Text="Endurance:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="23,297,0,0" TextWrapping="Wrap" Text="Vitality:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="23,313,0,0" TextWrapping="Wrap" Text="Strength:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="23,329,0,0" TextWrapping="Wrap" Text="Dexterity:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="23,345,0,0" TextWrapping="Wrap" Text="Intelligence:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="23,361,0,0" TextWrapping="Wrap" Text="Faith:" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="23,377,0,0" TextWrapping="Wrap" Text="Luck:" VerticalAlignment="Top"/>
+        <Button x:Name="genbtn" Content="Generate" HorizontalAlignment="Left" Margin="707,369,0,0" VerticalAlignment="Top" Width="75" FontSize="18" Click="genbtn_Click"/>
+        <ComboBox x:Name="combobx" HorizontalAlignment="Left" Margin="662,339,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem x:Name="warrior" Content="Warrior" IsSelected="True"/>
+            <ComboBoxItem x:Name="sorcerer" Content="Sorcerer"/>
+            <ComboBoxItem x:Name="pyromancer" Content="Pyromancer"/>
+            <ComboBoxItem x:Name="miracleuser" Content="Miracle User"/>
+            <ComboBoxItem x:Name="dexterityuser" Content="Dexterity User"/>
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Margin="269,361,0,0" TextWrapping="Wrap" Text="Selected Class: " VerticalAlignment="Top" FontSize="22" FontWeight="Bold" TextDecorations="{x:Null}"/>
+        <TextBlock x:Name="classnametxtblck" HorizontalAlignment="Left" Margin="425,361,0,0" TextWrapping="Wrap" Text="_____________" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" TextDecorations="Underline"/>
+
+    </Grid>
+</Window>
