@@ -20,6 +20,7 @@ namespace Sem2Project
     /// </summary>
     public partial class MainWindow : Window
     {
+        WeaponTypeContainer db = new WeaponTypeContainer();
         public MainWindow()
         {
             InitializeComponent();
@@ -47,6 +48,15 @@ namespace Sem2Project
             {
                 classnametxtblck.Text = "Dexterity User";
             }
+            var query = from WeaponImage in db.Weapons
+                        select WeaponImage;
+
+            lstbx1.ItemsSource = query.ToList();
+
         }
+
+        
+
+
     }
 }

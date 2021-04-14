@@ -7,7 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ListBox HorizontalAlignment="Left" Height="127" Margin="23,69,0,0" VerticalAlignment="Top" Width="135" FontSize="14"/>
         <TextBlock HorizontalAlignment="Left" Margin="61,31,0,0" TextWrapping="Wrap" Text="Weapon" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
         <TextBlock HorizontalAlignment="Left" Margin="278,31,0,0" TextWrapping="Wrap" Text="Rings" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
         <TextBlock HorizontalAlignment="Left" Margin="206,69,0,0" TextWrapping="Wrap" Text="Ring 1:" VerticalAlignment="Top" FontSize="14"/>
@@ -29,8 +28,8 @@
         <TextBlock HorizontalAlignment="Left" Margin="23,345,0,0" TextWrapping="Wrap" Text="Intelligence:" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="23,361,0,0" TextWrapping="Wrap" Text="Faith:" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="23,377,0,0" TextWrapping="Wrap" Text="Luck:" VerticalAlignment="Top"/>
-        <Button x:Name="genbtn" Content="Generate" HorizontalAlignment="Left" Margin="707,369,0,0" VerticalAlignment="Top" Width="75" FontSize="18" Click="genbtn_Click"/>
-        <ComboBox x:Name="combobx" HorizontalAlignment="Left" Margin="662,339,0,0" VerticalAlignment="Top" Width="120">
+        <Button x:Name="genbtn" Content="Generate" HorizontalAlignment="Left" Margin="707,381,0,0" VerticalAlignment="Top" Width="75" FontSize="18" Click="genbtn_Click"/>
+        <ComboBox x:Name="combobx" HorizontalAlignment="Left" Margin="662,345,0,0" VerticalAlignment="Top" Width="120">
             <ComboBoxItem x:Name="warrior" Content="Warrior" IsSelected="True"/>
             <ComboBoxItem x:Name="sorcerer" Content="Sorcerer"/>
             <ComboBoxItem x:Name="pyromancer" Content="Pyromancer"/>
@@ -38,7 +37,8 @@
             <ComboBoxItem x:Name="dexterityuser" Content="Dexterity User"/>
         </ComboBox>
         <TextBlock HorizontalAlignment="Left" Margin="269,361,0,0" TextWrapping="Wrap" Text="Selected Class: " VerticalAlignment="Top" FontSize="22" FontWeight="Bold" TextDecorations="{x:Null}"/>
-        <TextBlock x:Name="classnametxtblck" HorizontalAlignment="Left" Margin="425,361,0,0" TextWrapping="Wrap" Text="_____________" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" TextDecorations="Underline"/>
+        <TextBlock x:Name="classnametxtblck" HorizontalAlignment="Left" Margin="425,361,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" TextDecorations="Underline"/>
+        <DataGrid x:Name="lstbx1" HorizontalAlignment="Left" Height="115" Margin="23,69,0,0" VerticalAlignment="Top" Width="122"/>
 
     </Grid>
 </Window>
