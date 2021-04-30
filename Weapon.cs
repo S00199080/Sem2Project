@@ -14,18 +14,9 @@ namespace Sem2Project
     
     public partial class Weapon
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Weapon()
-        {
-            this.ClassTypes = new HashSet<ClassType>();
-        }
-    
         public int Id { get; set; }
         public string Name { get; set; }
         public string WeaponType { get; set; }
         public string WeaponImage { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ClassType> ClassTypes { get; set; }
     }
 }

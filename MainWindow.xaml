@@ -7,29 +7,33 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="61,31,0,0" TextWrapping="Wrap" Text="Weapon" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Margin="278,31,0,0" TextWrapping="Wrap" Text="Rings" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Margin="206,69,0,0" TextWrapping="Wrap" Text="Ring 1:" VerticalAlignment="Top" FontSize="14"/>
-        <TextBlock HorizontalAlignment="Left" Margin="206,165,0,0" TextWrapping="Wrap" Text="Ring 3:" VerticalAlignment="Top" FontSize="14"/>
-        <TextBlock HorizontalAlignment="Left" Margin="344,69,0,0" TextWrapping="Wrap" Text="Ring 2:" VerticalAlignment="Top" FontSize="14"/>
-        <TextBlock HorizontalAlignment="Left" Margin="344,165,0,0" TextWrapping="Wrap" Text="Ring 4:" VerticalAlignment="Top" FontSize="14"/>
-        <TextBlock HorizontalAlignment="Left" Margin="570,31,0,0" TextWrapping="Wrap" Text="Armour" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Margin="503,69,0,0" TextWrapping="Wrap" Text="Helm:" VerticalAlignment="Top" FontSize="14"/>
-        <TextBlock HorizontalAlignment="Left" Margin="503,165,0,0" TextWrapping="Wrap" Text="Leggings:" VerticalAlignment="Top" FontSize="14"/>
-        <TextBlock HorizontalAlignment="Left" Margin="640,69,0,0" TextWrapping="Wrap" Text="Chestpiece:" VerticalAlignment="Top" FontSize="14"/>
-        <TextBlock HorizontalAlignment="Left" Margin="640,165,0,0" TextWrapping="Wrap" Text="Boots:" VerticalAlignment="Top" FontSize="14"/>
-        <TextBlock HorizontalAlignment="Left" Margin="50,225,0,0" TextWrapping="Wrap" Text="Attributes" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
-        <TextBlock HorizontalAlignment="Left" Margin="23,249,0,0" TextWrapping="Wrap" Text="Vigor:" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="23,265,0,0" TextWrapping="Wrap" Text="Attunement:" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="23,281,0,0" TextWrapping="Wrap" Text="Endurance:" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="23,297,0,0" TextWrapping="Wrap" Text="Vitality:" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="23,313,0,0" TextWrapping="Wrap" Text="Strength:" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="23,329,0,0" TextWrapping="Wrap" Text="Dexterity:" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="23,345,0,0" TextWrapping="Wrap" Text="Intelligence:" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="23,361,0,0" TextWrapping="Wrap" Text="Faith:" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="23,377,0,0" TextWrapping="Wrap" Text="Luck:" VerticalAlignment="Top"/>
-        <Button x:Name="genbtn" Content="Generate" HorizontalAlignment="Left" Margin="707,381,0,0" VerticalAlignment="Top" Width="75" FontSize="18" Click="genbtn_Click"/>
-        <ComboBox x:Name="combobx" HorizontalAlignment="Left" Margin="662,345,0,0" VerticalAlignment="Top" Width="120">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Left" Margin="92,10,0,0" TextWrapping="Wrap" Text="Attributes" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,37,0,0" TextWrapping="Wrap" Text="Vigor:" VerticalAlignment="Top" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,53,0,0" TextWrapping="Wrap" Text="Attunement:" VerticalAlignment="Top" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,69,0,0" TextWrapping="Wrap" Text="Endurance:" VerticalAlignment="Top" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,119,0,0" TextWrapping="Wrap" Text="Vitality:" VerticalAlignment="Top" RenderTransformOrigin="0.052,0.376" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,85,0,0" TextWrapping="Wrap" Text="Strength:" VerticalAlignment="Top" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,101,0,0" TextWrapping="Wrap" Text="Dexterity:" VerticalAlignment="Top" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,135,0,0" TextWrapping="Wrap" Text="Intelligence:" VerticalAlignment="Top" Grid.Row="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,151,0,0" TextWrapping="Wrap" Text="Faith:" VerticalAlignment="Top" Grid.Row="1" RenderTransformOrigin="0.43,0.564"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,167,0,0" TextWrapping="Wrap" Text="Luck:" VerticalAlignment="Top" Grid.Row="1"/>
+        <Button x:Name="genbtn" Content="Generate" HorizontalAlignment="Left" Margin="104,169,0,0" VerticalAlignment="Top" Width="87" FontSize="18" Click="genbtn_Click" Grid.Column="2" Grid.Row="1" BorderThickness="2"/>
+        <ComboBox x:Name="combobx" HorizontalAlignment="Left" Margin="79,37,0,0" VerticalAlignment="Top" Width="132" Grid.Column="2" Grid.Row="1" BorderBrush="#FFA40F0F" SelectionChanged="combobx_SelectionChanged" Height="32" FontSize="20">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFF12727" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
             <ComboBoxItem x:Name="warrior" Content="Warrior" IsSelected="True"/>
             <ComboBoxItem x:Name="sorcerer" Content="Sorcerer"/>
             <ComboBoxItem x:Name="pyromancer" Content="Pyromancer"/>
@@ -38,7 +42,23 @@
         </ComboBox>
         <TextBlock HorizontalAlignment="Left" Margin="269,361,0,0" TextWrapping="Wrap" Text="Selected Class: " VerticalAlignment="Top" FontSize="22" FontWeight="Bold" TextDecorations="{x:Null}"/>
         <TextBlock x:Name="classnametxtblck" HorizontalAlignment="Left" Margin="425,361,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" TextDecorations="Underline"/>
-        <DataGrid x:Name="lstbx1" HorizontalAlignment="Left" Height="115" Margin="23,69,0,0" VerticalAlignment="Top" Width="122"/>
+        <DataGrid x:Name="lstbx1" HorizontalAlignment="Left" Height="190" Margin="10,10,0,0" VerticalAlignment="Top" Width="508" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="txtblckSTR" HorizontalAlignment="Left" Margin="92,85,0,0" Grid.Row="1" TextWrapping="Wrap" Text="---" VerticalAlignment="Top" Height="13" Width="15"/>
+        <TextBlock x:Name="txtblckDEX" HorizontalAlignment="Left" Margin="92,101,0,0" Grid.Row="1" TextWrapping="Wrap" Text="---" VerticalAlignment="Top" Height="13" Width="15"/>
+        <TextBlock x:Name="txtblckEND" HorizontalAlignment="Left" Margin="92,69,0,0" Grid.Row="1" TextWrapping="Wrap" Text="---" VerticalAlignment="Top" Height="13" Width="15"/>
+        <TextBlock x:Name="txtblckATT" HorizontalAlignment="Left" Margin="92,53,0,0" Grid.Row="1" TextWrapping="Wrap" Text="---" VerticalAlignment="Top" Height="13" Width="15"/>
+        <TextBlock x:Name="txtblckVIG" HorizontalAlignment="Left" Margin="92,37,0,0" Grid.Row="1" TextWrapping="Wrap" Text="---" VerticalAlignment="Top" Height="13" Width="98"/>
+        <TextBlock x:Name="txtblckVIT" HorizontalAlignment="Left" Margin="92,119,0,0" Grid.Row="1" TextWrapping="Wrap" Text="---" VerticalAlignment="Top" Height="13" Width="15"/>
+        <TextBlock x:Name="txtblckINT" HorizontalAlignment="Left" Margin="92,135,0,0" Grid.Row="1" TextWrapping="Wrap" Text="---" VerticalAlignment="Top" Height="13" Width="15"/>
+        <TextBlock x:Name="txtblckFAI" HorizontalAlignment="Left" Margin="92,151,0,0" Grid.Row="1" TextWrapping="Wrap" Text="---" VerticalAlignment="Top" Height="13" Width="15"/>
+        <TextBlock x:Name="txtblckLUC" HorizontalAlignment="Left" Margin="92,167,0,0" Grid.Row="1" TextWrapping="Wrap" Text="---" VerticalAlignment="Top" Height="13" Width="26"/>
+        <TextBlock HorizontalAlignment="Left" Margin="95,10,0,0" TextWrapping="Wrap" Text="Armour Set" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Grid.Row="1" Grid.Column="1"/>
+        <TextBlock x:Name="txtblckarmour" HorizontalAlignment="Left" Margin="63,88,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Height="111" Width="146" Grid.Column="1" FontSize="20" FontWeight="Bold" TextAlignment="Center"><Run Text="---"/><Run Text="---------------"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="114,10,0,0" TextWrapping="Wrap" Text="Rings" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Grid.Column="2"/>
+        <TextBlock x:Name="txtblckring1" HorizontalAlignment="Left" Margin="10,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="82" Width="106" Grid.Column="2" FontSize="20" FontWeight="Bold" TextAlignment="Center"><Run Text="---"/><Run Text="---------------"/></TextBlock>
+        <TextBlock x:Name="txtblckring2" HorizontalAlignment="Left" Margin="148,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="82" Width="106" Grid.Column="2" FontSize="20" FontWeight="Bold" TextAlignment="Center"><Run Text="---"/><Run Text="---------------"/></TextBlock>
+        <TextBlock x:Name="txtblckring3" HorizontalAlignment="Left" Margin="10,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="75" Width="106" Grid.Column="2" FontSize="20" FontWeight="Bold" TextAlignment="Center"><Run Text="---"/><Run Text="---------------"/></TextBlock>
+        <TextBlock x:Name="txtblckring4" HorizontalAlignment="Left" Margin="148,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="75" Width="106" Grid.Column="2" FontSize="20" FontWeight="Bold" TextAlignment="Center"><Run Text="---"/><Run Text="---------------"/></TextBlock>
 
     </Grid>
 </Window>

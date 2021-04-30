@@ -5,9 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="cd51eb9e788f4780b7485be8924ede15" Name="Diagram1" >
-        <EntityTypeShape EntityType="WeaponType.ClassType" Width="1.5" PointX="2.125" PointY="1.125" />
-        <EntityTypeShape EntityType="WeaponType.Weapon" Width="1.5" PointX="5.25" PointY="1.125" />
-        <AssociationConnector Association="WeaponType.WeaponClassType" />
+        <EntityTypeShape EntityType="WeaponType.Weapon" Width="1.5" PointX="2.75" PointY="1.125" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

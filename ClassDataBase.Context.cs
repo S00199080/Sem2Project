@@ -25,7 +25,6 @@ namespace Sem2Project
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<ClassType> ClassTypes { get; set; }
         public virtual DbSet<Weapon> Weapons { get; set; }
     }
 }

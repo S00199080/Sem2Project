@@ -6,25 +6,8 @@
     <edmx:StorageModels>
     <Schema Namespace="WeaponType.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityContainer Name="WeaponTypeStoreContainer">
-    <EntitySet Name="ClassTypes" EntityType="WeaponType.Store.ClassTypes" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Weapons" EntityType="WeaponType.Store.Weapons" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="WeaponClassType" EntityType="WeaponType.Store.WeaponClassType" store:Type="Tables" Schema="dbo" />
-    <AssociationSet Name="FK_WeaponClassType_Weapon" Association="WeaponType.Store.FK_WeaponClassType_Weapon">
-      <End Role="Weapon" EntitySet="Weapons" />
-      <End Role="WeaponClassType" EntitySet="WeaponClassType" />
-    </AssociationSet>
-    <AssociationSet Name="FK_WeaponClassType_ClassType" Association="WeaponType.Store.FK_WeaponClassType_ClassType">
-      <End Role="ClassType" EntitySet="ClassTypes" />
-      <End Role="WeaponClassType" EntitySet="WeaponClassType" />
-    </AssociationSet>
-  </EntityContainer>
-  <EntityType Name="ClassTypes">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
-  </EntityType>
+    </EntityContainer>
   <EntityType Name="Weapons">
     <Key>
       <PropertyRef Name="Id" />
@@ -34,58 +17,13 @@
     <Property Name="WeaponType" Type="nvarchar(max)" Nullable="false" />
     <Property Name="WeaponImage" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
-  <EntityType Name="WeaponClassType">
-    <Key>
-      <PropertyRef Name="Weapons_Id" />
-      <PropertyRef Name="ClassTypes_Id" />
-    </Key>
-    <Property Name="Weapons_Id" Type="int" Nullable="false" />
-    <Property Name="ClassTypes_Id" Type="int" Nullable="false" />
-  </EntityType>
-  <Association Name="FK_WeaponClassType_Weapon">
-    <End Role="Weapon" Type="WeaponType.Store.Weapons" Multiplicity="1" />
-    <End Role="WeaponClassType" Type="WeaponType.Store.WeaponClassType" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Weapon">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="WeaponClassType">
-        <PropertyRef Name="Weapons_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_WeaponClassType_ClassType">
-    <End Role="WeaponClassType" Type="WeaponType.Store.WeaponClassType" Multiplicity="*" />
-    <End Role="ClassType" Type="WeaponType.Store.ClassTypes" Multiplicity="1" />
-    <ReferentialConstraint>
-      <Principal Role="ClassType">
-        <PropertyRef Name="Id" />
-      </Principal>
-      <Dependent Role="WeaponClassType">
-        <PropertyRef Name="ClassTypes_Id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
 </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="WeaponType" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
         <EntityContainer Name="WeaponTypeContainer" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="ClassTypes" EntityType="WeaponType.ClassType" />
           <EntitySet Name="Weapons" EntityType="WeaponType.Weapon" />
-          <AssociationSet Name="WeaponClassType" Association="WeaponType.WeaponClassType">
-            <End Role="Weapon" EntitySet="Weapons" />
-            <End Role="ClassType" EntitySet="ClassTypes" />
-          </AssociationSet>
         </EntityContainer>
-        <EntityType Name="ClassType">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" Nullable="false" />
-          <NavigationProperty Name="Weapons" Relationship="WeaponType.WeaponClassType" FromRole="ClassType" ToRole="Weapon" />
-        </EntityType>
         <EntityType Name="Weapon">
           <Key>
             <PropertyRef Name="Id" />
@@ -93,27 +31,14 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" Nullable="false" />
           <Property Name="WeaponType" Type="String" Nullable="false" />
-          <Property Name="WeaponImage" Type="String" Nullable="false" />
-          <NavigationProperty Name="ClassTypes" Relationship="WeaponType.WeaponClassType" FromRole="Weapon" ToRole="ClassType" />
+          <Property Name="WeaponImage" Nullable="false" Type="String" />
         </EntityType>
-        <Association Name="WeaponClassType">
-          <End Type="WeaponType.Weapon" Role="Weapon" Multiplicity="*" />
-          <End Type="WeaponType.ClassType" Role="ClassType" Multiplicity="*" />
-        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
     <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="WeaponTypeStoreContainer" CdmEntityContainer="WeaponTypeContainer">
-    <EntitySetMapping Name="ClassTypes">
-      <EntityTypeMapping TypeName="IsTypeOf(WeaponType.ClassType)">
-        <MappingFragment StoreEntitySet="ClassTypes">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Weapons">
       <EntityTypeMapping TypeName="IsTypeOf(WeaponType.Weapon)">
         <MappingFragment StoreEntitySet="Weapons">
@@ -124,14 +49,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="WeaponClassType" TypeName="WeaponType.WeaponClassType" StoreEntitySet="WeaponClassType">
-      <EndProperty Name="Weapon">
-        <ScalarProperty Name="Id" ColumnName="Weapons_Id" />
-      </EndProperty>
-      <EndProperty Name="ClassType">
-        <ScalarProperty Name="Id" ColumnName="ClassTypes_Id" />
-      </EndProperty>
-    </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping></edmx:Mappings>
   </edmx:Runtime>

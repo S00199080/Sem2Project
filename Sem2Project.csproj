@@ -64,6 +64,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="StatTypes.cs" />
     <Compile Include="ClassDataBase.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -78,9 +79,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ClassDataBase.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="ClassType.cs">
-      <DependentUpon>ClassDataBase.tt</DependentUpon>
     </Compile>
     <Compile Include="Weapon.cs">
       <DependentUpon>ClassDataBase.tt</DependentUpon>
