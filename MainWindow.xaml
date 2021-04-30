@@ -57,8 +57,8 @@
         <TextBlock HorizontalAlignment="Left" Margin="114,10,0,0" TextWrapping="Wrap" Text="Rings" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Grid.Column="2"/>
         <TextBlock x:Name="txtblckring1" HorizontalAlignment="Left" Margin="10,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="82" Width="106" Grid.Column="2" FontSize="20" FontWeight="Bold" TextAlignment="Center"><Run Text="---"/><Run Text="---------------"/></TextBlock>
         <TextBlock x:Name="txtblckring2" HorizontalAlignment="Left" Margin="148,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="82" Width="106" Grid.Column="2" FontSize="20" FontWeight="Bold" TextAlignment="Center"><Run Text="---"/><Run Text="---------------"/></TextBlock>
-        <TextBlock x:Name="txtblckring3" HorizontalAlignment="Left" Margin="10,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="75" Width="106" Grid.Column="2" FontSize="20" FontWeight="Bold" TextAlignment="Center"><Run Text="---"/><Run Text="---------------"/></TextBlock>
-        <TextBlock x:Name="txtblckring4" HorizontalAlignment="Left" Margin="148,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="75" Width="106" Grid.Column="2" FontSize="20" FontWeight="Bold" TextAlignment="Center"><Run Text="---"/><Run Text="---------------"/></TextBlock>
+        <TextBlock x:Name="txtblckring3" HorizontalAlignment="Left" Margin="10,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="85" Width="106" Grid.Column="2" FontSize="20" FontWeight="Bold" TextAlignment="Center"><Run Text="---"/><Run Text="---------------"/></TextBlock>
+        <TextBlock x:Name="txtblckring4" HorizontalAlignment="Left" Margin="148,125,0,0" TextWrapping="Wrap" Width="106" Grid.Column="2" FontSize="20" FontWeight="Bold" TextAlignment="Center"><Run Text="---"/><Run Text="---------------"/></TextBlock>
 
     </Grid>
 </Window>
